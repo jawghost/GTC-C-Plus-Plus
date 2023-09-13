@@ -1,0 +1,11 @@
+//---------GRADE REPORT-----------------------------------
+//  Read a file, compute the six-week grade average, and
+//  print a six-week grade report.
+//
+//              PROGRAM-ID: CHAP7A
+//              PROGRAMMERL David M. Callopy 
+//              RUN DATE:   mm/dd/yy
+//********************************************************
+
+//----------- PREPROCESSING DIRECTIVES --------------------
+#include<iostream> 

@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+void OpenFile(void);
+void PrnHeadings(void);
+void ProcessLoop(void);
+void InputRecord(void);
+void ComputerAvr(void);
+void PrnDetail(void);
+
+char PT1[] = "     S I X  W E E K  G R A D E  R E P O R T";
+char HL1[] = "   Student  T e s t  S c o r e s      Average";
+char HL2[] = "---------------------------------------------"
+
+ifstream gradeFile;
+char student[16];
+int grade1;
+int grade2;
+int grade3;
+int grade4;
+int grade5;
+int grade6;
+
+float gradeTotal;
+float gradeAvr;
+
+//Mainline control
+
+main()
+{
+
+	OpenFile();
+	if (!gradeFile.fail()) {
+		PrnHeadings();
+		ProcessLoop();
+		gradeFile.close();
+	}
+	cout << "\n-----<E N D  O F R U N>-----";
+	return 0;
+}

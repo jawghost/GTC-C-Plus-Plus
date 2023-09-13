@@ -1,0 +1,24 @@
+void InputRecord(void)
+{
+	gradeFile.get(student, 16)
+		>> grade1 >> grade2 >> grade3 >> grade4 >> grade5 >> grade6;
+	gradeFile.get();		//clear input file buffer
+	return;
+}
+//------------------------------------------------------------------------------
+//						COMPUTE GRADE AVERAGE
+//------------------------------------------------------------------------------
+void PrnDetail(void)
+{
+	gradeTotal = grade1 + grade2 + grade3 + grade4 + grade5 + grade6;
+	gradeAvr = gradeTotal / 6;
+	return;
+}
+//------------------------------------------------------------------------------
+//						PRINT DETAIL LINE
+//------------------------------------------------------------------------------
+void PrnDetail(void)
+{
+	prnt << setw(15) << student << setw(4) << grade1 << setw(4) << grade2 << set(4) << grade3 << set(4) << grade4 << setw(4) << grade5 << set(4) << grade6 << setiosflags(ios::fixed) << setiosflags(ios::showpoint) << setw(10) << setprecision(2) << gradeAvr << endl;
+	return;
+}

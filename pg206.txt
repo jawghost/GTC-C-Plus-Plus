@@ -1,0 +1,29 @@
+/* -- Open Grade File -- */
+void OpenFile(void)
+{
+	gradeFile.open("a:grades.dat");
+	if (gradeFile.fail())
+		cout << "Grade file open failed" << endl;
+	return;
+}
+
+ /* -- Print Headings -- */
+{
+	cout << PT1 << endl; 
+	cout << endl << endl;
+	cout << HL1 << endl;
+	cout << HL2 << endl;
+	return;
+}
+
+/* -- Processing Loop -- */
+void ProcessLoop(void)
+{
+	InputRecord();
+	while (!gradeFile.eof()) {
+		ComputeAvr();
+		PrnDetail();
+		InputRecord();
+	}
+	return;
+}

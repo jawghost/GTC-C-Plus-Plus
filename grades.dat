@@ -1,0 +1,18 @@
+ifstream gradefile;
+char student[16];
+int grade1;
+int grade2;
+int grade3;
+int grade4;
+int grade4;
+int grade5;
+int grade6;
+
+gradeFile.open("a:grades.dat");
+
+gradeFile.get(student, 16)
+    >> grade1 >> grade2 >> grade3
+    >> grade4 >> grade5 >> grade6;
+gradeFile.get();
+
+gradeFile.close();
