@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jwillia2544"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-02 10:37:06 PM"/>
+        <attribute name="created" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA4OyAyMDE4LTA5LTI1OyAwNjoxOToxMiBQTTsgMjg4Nw=="/>
+        <attribute name="edited" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA4OyAyMDE4LTA5LTI1OyAwNzowMDozMyBQTTsgMjg4MQ=="/>
+        <attribute name="edited" value="andqYWM7TEFQVE9QLVBLNU9WSDUzOzIwMTgtMTAtMDI7MTA6Mzc6MDYgUE07MjsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="neSales" type="Real" array="False" size=""/>
+            <declare name="seSales" type="Real" array="False" size=""/>
+            <declare name="nwSales" type="Real" array="False" size=""/>
+            <declare name="swSales" type="Real" array="False" size=""/>
+            <assign variable="neSales" expression="getSales(&quot;Northeast&quot;)"/>
+            <assign variable="seSales" expression="getSales(&quot;Southeast&quot;)"/>
+            <assign variable="nwSales" expression="getSales(&quot;Northwest&quot;)"/>
+            <assign variable="swSales" expression="getSales(&quot;Southwast&quot;)"/>
+            <call expression="findHighest(neSales, seSales, nwSales, swSales)"/>
+        </body>
+    </function>
+    <function name="findHighest" type="None" variable="End">
+        <parameters>
+            <parameter name="ne" type="Real" array="False"/>
+            <parameter name="se" type="Real" array="False"/>
+            <parameter name="nw" type="Real" array="False"/>
+            <parameter name="sw" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="holdHighest" type="Integer" array="False" size=""/>
+            <declare name="holdDepartment" type="String" array="False" size=""/>
+            <assign variable="holdHighest" expression="0"/>
+            <if expression="ne &gt; holdHighest">
+                <then>
+                    <assign variable="holdHighest" expression="ne"/>
+                    <assign variable="holdDepartment" expression="&quot;Northeast&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="se &gt; holdHighest">
+                <then>
+                    <assign variable="holdHighest" expression="se"/>
+                    <assign variable="holdDepartment" expression="&quot;Southeast&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="nw &gt; holdHighest">
+                <then>
+                    <assign variable="holdHighest" expression="nw"/>
+                    <assign variable="holdDepartment" expression="&quot;Northwest&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="sw &gt; holdHighest">
+                <then>
+                    <assign variable="holdHighest" expression="sw"/>
+                    <assign variable="holdDepartment" expression="&quot;Southwest&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;The highest income division is: &quot; &amp; holdDepartment" newline="True"/>
+            <output expression="&quot;Reported income is: &quot;  &amp; holdHighest" newline="True"/>
+        </body>
+    </function>
+    <function name="getSales" type="Real" variable="salesAmt">
+        <parameters>
+            <parameter name="deptName" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="salesAmt" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter sales for department&quot; &amp; deptName" newline="True"/>
+            <input variable="salesAmt"/>
+            <while expression="salesAmt &lt; 0">
+                <output expression="&quot;Retry entering sales for department and make sure to enter a positive number for department: &quot; &amp; deptName" newline="True"/>
+                <input variable="salesAmt"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

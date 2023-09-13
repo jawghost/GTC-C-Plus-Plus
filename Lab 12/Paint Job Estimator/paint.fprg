@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jwillia2544"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-30 09:24:50 PM"/>
+        <attribute name="created" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA3OyAyMDE4LTEwLTMwOyAwOToxMDo0NyBQTTsgMjg3Ng=="/>
+        <attribute name="edited" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA3OyAyMDE4LTEwLTMwOyAwOToyNDo1MCBQTTsgMjg3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numberofRooms" type="Integer" array="False" size="" variables="numberofRooms"/>
+            <declare name="priceofpaintperGallon" type="Integer" array="False" size="" variables="priceofpaintperGallon"/>
+            <declare name="sqftWall" type="Integer" array="False" size="" variables="sqftWall"/>
+            <input variable="numberofRooms"/>
+            <input variable="priceofpaintperGallon"/>
+            <input variable="sqftWall"/>
+        </body>
+    </function>
+    <function name="output" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="totalCost"/>
+        </body>
+    </function>
+    <function name="Process" type="None" variable="">
+        <parameters/>
+        <body>
+            <assign variable="gallonsofPaint" expression="sqftWall / 110"/>
+            <assign variable="totallabor" expression="8 * gallonsofpaint"/>
+            <assign variable="costofPaint" expression="priceofpaintperGallon * gallonofPaint"/>
+            <assign variable="laborCharges" expression="totalLabor * 25.00"/>
+            <assign variable="totalCost" expression="costofPaint + laborCharges"/>
+        </body>
+    </function>
+</flowgorithm>

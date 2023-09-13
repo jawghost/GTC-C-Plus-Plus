@@ -1,0 +1,23 @@
+﻿Build started 10/30/2018 9:23:01 PM.
+     1>Project "D:\school\2018 Year\Fall 2018\CIST 2361\Lab 12\Paint Job Estimator\Paint Job Estimator\Paint Job Estimator.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PntJobEst.cpp
+         PntJobEst.cpp
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(30): error C2065: 'totalCost' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(35): error C2065: 'gallonsofPaint' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(35): error C2065: 'sqftWall' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(36): error C2065: 'totallabor' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(36): error C2065: 'gallonsofPaint' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(37): error C2065: 'costofPaint' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(37): error C2065: 'priceofpaintperGallon' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(37): error C2065: 'gallonofPaint' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(38): error C2065: 'laborCharges' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(38): error C2065: 'totallabor' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(39): error C2065: 'totalCost' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(39): error C2065: 'costofPaint' : undeclared identifier
+     1>d:\school\2018 year\fall 2018\cist 2361\lab 12\paint job estimator\paint job estimator\pntjobest.cpp(39): error C2065: 'laborCharges' : undeclared identifier
+     1>Done Building Project "D:\school\2018 Year\Fall 2018\CIST 2361\Lab 12\Paint Job Estimator\Paint Job Estimator\Paint Job Estimator.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.71

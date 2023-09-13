@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jwjac"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-02 11:27:44 PM"/>
+        <attribute name="created" value="andqYWM7TEFQVE9QLVBLNU9WSDUzOzIwMTgtMTAtMDI7MTA6Mzc6MDggUE07Mjg2Mg=="/>
+        <attribute name="edited" value="andqYWM7TEFQVE9QLVBLNU9WSDUzOzIwMTgtMTAtMDI7MTE6MTA6MTAgUE07Mjtqd2lsbGlhMjU0NDs3MDAtMjMwNC0wODsyMDE4LTA5LTI1OzA2OjE5OjEyIFBNO1dpbm5pbmdEaXZpc29uRmxvLmZwcmc7ODA5Mw=="/>
+        <attribute name="edited" value="andqYWM7TEFQVE9QLVBLNU9WSDUzOzIwMTgtMTAtMDI7MTE6Mjc6NDQgUE07MjsyOTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="northAccidents" type="Integer" array="False" size=""/>
+            <declare name="southAccidents" type="Integer" array="False" size=""/>
+            <declare name="eastAccidents" type="Integer" array="False" size=""/>
+            <declare name="westAccidents" type="Integer" array="False" size=""/>
+            <declare name="centralAccidents" type="Integer" array="False" size=""/>
+            <assign variable="northAccidents" expression="getNumAccidents(&quot;North&quot;)"/>
+            <assign variable="southAccidents" expression="getNumAccidents(&quot;South&quot;)"/>
+            <assign variable="eastAccidents" expression="getNumAccidents(&quot;East&quot;)"/>
+            <assign variable="westAccidents" expression="getNumAccidents(&quot;West&quot;)"/>
+            <assign variable="centralAccidents" expression="getNumAccidents(&quot;Central&quot;)"/>
+            <call expression="findLowest(northAccidents, southAccidents, eastAccidents, westAccidents, centralAccidents)"/>
+        </body>
+    </function>
+    <function name="findLowest" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="s" type="Integer" array="False"/>
+            <parameter name="e" type="Integer" array="False"/>
+            <parameter name="w" type="Integer" array="False"/>
+            <parameter name="c" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="findLowest" type="Integer" array="False" size=""/>
+            <declare name="holdArea" type="String" array="False" size=""/>
+            <assign variable="findLowest" expression="0"/>
+            <if expression="n &gt; findLowest">
+                <then>
+                    <assign variable="findLowest" expression="n"/>
+                    <assign variable="holdArea" expression="&quot;North&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="s &gt; findlowest">
+                <then>
+                    <assign variable="findLowest" expression="s"/>
+                    <assign variable="holdArea" expression="&quot;South&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="e &gt; findLowest">
+                <then>
+                    <assign variable="findLowest" expression="e"/>
+                    <assign variable="holdArea" expression="&quot;East&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="w &gt; findLowest">
+                <then>
+                    <assign variable="findLowest" expression="w"/>
+                    <assign variable="holdArea" expression="&quot;West&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="c &gt; findLowest">
+                <then>
+                    <assign variable="findLowest" expression="c"/>
+                    <assign variable="holdArea" expression="&quot;Central&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;The lowest accident area is: &quot; &amp; holdArea" newline="True"/>
+            <output expression="&quot;Lowest number of accidents is: &quot;  &amp; findLowest" newline="True"/>
+        </body>
+    </function>
+    <function name="getNumAccidents" type="Integer" variable="numAccidents">
+        <parameters>
+            <parameter name="region" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="numAccidents" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the number of accidents in an area &quot; &amp; region" newline="True"/>
+            <input variable="numAccidents"/>
+            <while expression="numAccidents &lt; 0">
+                <output expression="&quot;Retry entering number of accidents and make sure to enter a positive number for accidents: &quot; &amp; region" newline="True"/>
+                <input variable="numAccidents"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

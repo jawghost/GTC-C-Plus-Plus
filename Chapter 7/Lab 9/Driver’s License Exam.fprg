@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jwillia2544"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-16 07:58:25 PM"/>
+        <attribute name="created" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA4OyAyMDE4LTEwLTE2OyAwNjoyNzowNSBQTTsgMjg4MA=="/>
+        <attribute name="edited" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA4OyAyMDE4LTEwLTE2OyAwNzo1ODoyNSBQTTsgMjg4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sAnswerKey" type="String" array="True" size="20" variables="sAnswerKey[20]"/>
+            <declare name="sStudentAns" type="String" array="True" size="20" variables="sStudentAns[20]"/>
+            <call expression="loadAnswerKey(sAnswerKey)"/>
+            <call expression="loadStudentAnswers(sStudentAns)"/>
+            <call expression="identifyNumCorrect(sAnswerKey, sStudentAns)"/>
+        </body>
+    </function>
+    <function name="identifyNumCorrect" type="None" variable="">
+        <parameters>
+            <parameter name="sAK" type="String" array="True"/>
+            <parameter name="sSA" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size="" variables="count"/>
+            <declare name="numberCorrect" type="Integer" array="False" size="" variables="numberCorrect"/>
+            <assign variable="numberCorrect" expression="0"/>
+            <for variable="count" start="0" end="19" direction="inc" step="1">
+                <if expression="sAK[count] == sSA[count]">
+                    <then>
+                        <assign variable="numberCorrect" expression="numberCorrect + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="loadAnswerKey" type="None" variable="">
+        <parameters>
+            <parameter name="sAnswerKey" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size="" variables="count"/>
+            <for variable="count" start="0" end="19" direction="inc" step="1">
+                <output expression="&quot;Enter a correct answer.&quot;"/>
+                <input variable="sAnswerKey[count]"/>
+            </for>
+        </body>
+    </function>
+    <function name="loadStudentAnswers" type="None" variable="">
+        <parameters>
+            <parameter name="sSA" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size="" variables="count"/>
+            <for variable="count" start="0" end="19" direction="inc" step="1">
+                <output expression="&quot;Enter a student answer.&quot;"/>
+                <input variable="sSA[count]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
