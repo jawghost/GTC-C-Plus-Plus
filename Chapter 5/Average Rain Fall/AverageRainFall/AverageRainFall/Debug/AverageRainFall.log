@@ -1,0 +1,13 @@
+﻿Build started 9/18/2018 8:41:04 PM.
+     1>Project "D:\school\Fall 2018\CIST 2361\Projects\Chapter 5\Average Rain Fall\AverageRainFall\AverageRainFall\AverageRainFall.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Rainfall.cpp
+         Rainfall.cpp
+     1>d:\school\fall 2018\cist 2361\projects\chapter 5\average rain fall\averagerainfall\averagerainfall\rainfall.cpp(23): error C2086: 'int RainFall::count' : redefinition
+                 d:\school\fall 2018\cist 2361\projects\chapter 5\average rain fall\averagerainfall\averagerainfall\rainfall.cpp(20) : see declaration of 'RainFall::count'
+     1>d:\school\fall 2018\cist 2361\projects\chapter 5\average rain fall\averagerainfall\averagerainfall\rainfall.cpp(64): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Done Building Project "D:\school\Fall 2018\CIST 2361\Projects\Chapter 5\Average Rain Fall\AverageRainFall\AverageRainFall\AverageRainFall.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.48

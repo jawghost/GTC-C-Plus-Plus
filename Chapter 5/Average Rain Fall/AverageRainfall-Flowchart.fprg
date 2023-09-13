@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jwillia2544"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-09-18 08:24:22 PM"/>
+        <attribute name="created" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA4OyAyMDE4LTA5LTE4OyAwNjo0MTozMSBQTTsgMjg4NQ=="/>
+        <attribute name="edited" value="andpbGxpYTI1NDQ7IDcwMC0yMzA0LTA4OyAyMDE4LTA5LTE4OyAwODoyNDoyMiBQTTsgMjg4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="input"/>
+            <call expression="process"/>
+            <call expression="output"/>
+        </body>
+    </function>
+    <function name="input" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="output" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="process" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fMonthRainfall" type="Real" array="False" size="" variables="fMonthRainfall"/>
+            <declare name="iNumMonths" type="Integer" array="False" size="" variables="iNumMonths"/>
+            <declare name="fTotalRainfall" type="Real" array="False" size="" variables="fTotalRainfall"/>
+            <declare name="count" type="Integer" array="False" size="" variables="count"/>
+            <assign variable="fTotalRainfall" expression="0"/>
+            <assign variable="iNumMonths" expression="0"/>
+            <for variable="count" start="1" end="12" direction="inc" step="1">
+                <comment text="Start Inner loop here"/>
+                <output expression="&quot;Enter one month's worth of rainfall.&quot;"/>
+                <input variable="fMonthRainfall"/>
+                <comment text="Calculate the number of months"/>
+                <assign variable="iNumMonths" expression="iNumMonths + 1"/>
+                <comment text="Accumulate the total rainfall"/>
+                <assign variable="fTotalRainfall" expression="fTotalRainfall + fMonthRainfall"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
